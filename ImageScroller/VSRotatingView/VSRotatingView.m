@@ -29,24 +29,6 @@
     return self;
 }
 
-/*
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        // Initialization code
-        NSLog(@"coder called");
-    }
-    return self;
-}
-
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect
- {
- // Drawing code
- }
-*/
-
 - (void) awakeFromNib
 {
     [super awakeFromNib];
@@ -94,7 +76,7 @@
         currentDialAngle += M_PI;
         NSInteger currentSegment = currentDialAngle / segmentAngle;
         NSInteger newRotation = currentSegment - 3; // Correct for the normalization.
-        
+
         // Match up negative numbers to the wellness numbers.
         if (newRotation < 0)
             newRotation += NUMBER_OF_SEGMENTS;
@@ -117,11 +99,6 @@
                          }
                          completion:NULL];
     }
-}
-
-- (void)rotate:(int) move
-{
-    self.wellnessDial.transform  = CGAffineTransformMakeRotation(51.16f*move);
 }
 
 

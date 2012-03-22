@@ -10,10 +10,8 @@
 
 @interface ViewController : UIViewController
 {
-    UIImageView *sectionBackground;
 }
 
-@property (nonatomic, retain) IBOutlet UIImageView *sectionBackground;
 
 
 @end

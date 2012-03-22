@@ -24,7 +24,7 @@
 @property (nonatomic, retain) IBOutlet UIImageView *wellnessDialOverlay;
 
 -(void) setupGestures;
--(void) rotate:(int) move;
+//-(void) rotate:(int) move;
 
 
 @end

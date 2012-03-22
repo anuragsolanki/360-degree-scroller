@@ -12,7 +12,6 @@
 
 @implementation ViewController
 
-@synthesize sectionBackground;
 
 
 - (id)init{
@@ -26,8 +25,8 @@
     
     VSRotatingView *rv = [VSRotatingView new];
     CGRect frame = rv.frame;
-    rv.frame = CGRectMake(frame.origin.x+6.0f, frame.origin.y, frame.size.width, frame.size.height);
-    [self.sectionBackground addSubview:rv];
+    rv.frame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
+    [self.view addSubview:rv];
 }
 
 - (void)viewDidUnload
@@ -41,7 +40,6 @@
 }
 
 - (void)dealloc {
-    [sectionBackground release];
     [super dealloc];
 }
 
